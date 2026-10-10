@@ -1,84 +1,14 @@
 <!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Cortes precisos, rituales clásicos y una experiencia hecha a tu medida." />
-    <title>Barber — Tu mejor versión</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Barber, inicio">B<span>R</span>BER</a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menú</button>
-      <nav id="navigation" class="navigation" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="button button-small" href="#reservar">Reservar</a>
-      </nav>
-    </header>
-
-    <main>
-      <section id="inicio" class="hero">
-        <div class="hero-content">
-          <p class="eyebrow">Barbería &amp; grooming</p>
-          <h1>Tu estilo,<br /><em>bien definido.</em></h1>
-          <p class="hero-copy">Cortes precisos, rituales clásicos y una experiencia pensada para que salgas sintiéndote increíble.</p>
-          <div class="hero-actions">
-            <a class="button" href="#reservar">Reserva tu cita <span>→</span></a>
-            <a class="text-link" href="#servicios">Ver servicios</a>
-          </div>
-        </div>
-        <div class="hero-art" aria-label="Ilustración abstracta de una barbería">
-          <div class="hero-orbit"></div>
-          <div class="hero-card"><span>Desde</span><strong>2014</strong><span>con oficio</span></div>
-          <div class="hero-word">C<span>U</span>T</div>
-        </div>
-      </section>
-
-      <section id="servicios" class="services section">
-        <div class="section-heading">
-          <p class="eyebrow">Elige tu ritual</p>
-          <h2>Lo clásico, llevado<br />a otro nivel.</h2>
-        </div>
-        <div class="service-grid">
-          <article><span class="number">01</span><h3>Corte de autor</h3><p>Diagnóstico, corte y acabado personalizado para tu estilo.</p><strong>Desde $25</strong></article>
-          <article><span class="number">02</span><h3>Barba ritual</h3><p>Toalla caliente, afeitado preciso y cuidado de la piel.</p><strong>Desde $18</strong></article>
-          <article><span class="number">03</span><h3>Experiencia completa</h3><p>Corte, barba y tratamiento para un cambio total.</p><strong>Desde $40</strong></article>
-        </div>
-      </section>
-
-      <section id="nosotros" class="about section">
-        <div class="about-mark">B.</div>
-        <div>
-          <p class="eyebrow">Nuestro código</p>
-          <h2>Tiempo para ti.<br />Técnica para siempre.</h2>
-          <p>Creemos que un buen corte empieza escuchando. Combinamos oficio, atención al detalle y productos seleccionados para crear una experiencia sin prisa.</p>
-          <a class="text-link" href="#contacto">Conoce el estudio <span>→</span></a>
-        </div>
-      </section>
-
-      <section id="reservar" class="booking section">
-        <p class="eyebrow">Tu próximo corte</p>
-        <h2>Haz espacio para<br /><em>verte bien.</em></h2>
-        <form class="booking-form">
-          <label>Nombre<input required name="name" placeholder="¿Cómo te llamas?" /></label>
-          <label>Servicio<select name="service"><option>Corte de autor</option><option>Barba ritual</option><option>Experiencia completa</option></select></label>
-          <button class="button" type="submit">Solicitar reserva <span>→</span></button>
-        </form>
-        <p class="form-message" role="status" aria-live="polite"></p>
-      </section>
-    </main>
-
-    <footer id="contacto" class="footer">
-      <div><a class="brand" href="#inicio">B<span>R</span>BER</a><p>Av. del Estilo 24<br />Lun–Sáb · 10:00–20:00</p></div>
-      <div><p class="eyebrow">Síguenos</p><a href="#">Instagram</a><a href="#">WhatsApp</a></div>
-      <p class="copyright">© <span id="year"></span> Barber Studio</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Barber Studio. Un concepto de barbería donde el oficio clásico encuentra el estilo contemporáneo."><meta name="theme-color" content="#171917"><title>Barber Studio — El estilo es un oficio</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
+<body><a class="skip" href="#contenido">Saltar al contenido</a><header><a class="brand" href="#inicio">BARBER<span>STUDIO · CORTE & BARBA</span></a><button class="menu" aria-expanded="false" aria-controls="nav">Menú +</button><nav id="nav"><a href="#servicios">Servicios</a><a href="#nosotros">El estudio</a><a href="#galeria">Galería</a><a class="button small" href="#reservar">Reservar turno ↗</a></nav></header>
+<main id="contenido"><section class="hero" id="inicio"><img src="assets/barber.jpg" alt="Interior de una barbería con sillones y espejos" fetchpriority="high"><div class="hero-copy"><p class="eyebrow">EL OFICIO DE HACERTE SENTIR BIEN</p><h1>El estilo<br>es un <em>oficio.</em></h1><p>Manos expertas. Cortes con carácter.<br>Un momento que es solamente tuyo.</p><a class="button" href="#reservar">Encontrá tu próximo estilo ↗</a></div><div class="hero-bottom"><span>CLÁSICOS POR ESENCIA. ACTUALES POR ELECCIÓN.</span><a href="#servicios">Descubrí el estudio ↓</a></div></section>
+<div class="ticker"><span>PRECISIÓN</span><b>✦</b><span>CARÁCTER</span><b>✦</b><span>BUEN OFICIO</span><b>✦</b><span>TU MEJOR VERSIÓN</span></div>
+<section class="section" id="servicios"><div class="heading"><div><p class="eyebrow">01 / NUESTROS SERVICIOS</p><h2>Un buen corte.<br>Un gran <em>ritual.</em></h2></div><p>Desde un clásico de siempre hasta un nuevo comienzo. Elegí la experiencia que va con vos.</p></div><div class="services">
+<article><span>01</span><div><h3>Corte de autor</h3><p>Asesoramiento, corte a tijera o máquina y terminación.</p></div><small>40 min</small><button data-service="Corte de autor" aria-label="Elegir Corte de autor">↗</button></article>
+<article><span>02</span><div><h3>Ritual de barba</h3><p>Perfilado, toalla caliente y cuidado de la piel.</p></div><small>30 min</small><button data-service="Ritual de barba" aria-label="Elegir Ritual de barba">↗</button></article>
+<article><span>03</span><div><h3>La experiencia completa</h3><p>Corte y barba. Todos los detalles, en un solo ritual.</p></div><small>70 min</small><button data-service="La experiencia completa" aria-label="Elegir La experiencia completa">↗</button></article></div><p class="note">Servicios y duraciones ilustrativos. Tarifas a definir.</p></section>
+<section class="section about" id="nosotros"><div class="about-photo"><img src="assets/ritual.jpg" alt="Trabajo de precisión durante un corte de cabello" loading="lazy"><span>EL DETALLE HACE LA DIFERENCIA.</span></div><div><p class="eyebrow">02 / EL ESTUDIO</p><h2>El tiempo pasa.<br>El buen oficio<br><em>se queda.</em></h2><p>Un espacio pensado para bajar un cambio. Donde cada corte empieza con una conversación y termina con un estilo que se siente propio.</p><p>Esta es nuestra idea de barbería: atención personal, técnica y respeto por los detalles. Sin apuro.</p><a class="text-link" href="#reservar">Sentate. Nosotros nos ocupamos. ↗</a></div></section>
+<section class="section" id="galeria"><div class="heading"><div><p class="eyebrow">03 / PUERTAS ADENTRO</p><h2>Un lugar con <em>carácter.</em></h2></div><p>La atmósfera también es parte del ritual.</p></div><div class="gallery"><figure><img src="assets/barber.jpg" alt="Ambiente del estudio, imagen de concepto" loading="lazy"><figcaption>01 — El espacio</figcaption></figure><figure><img src="assets/ritual.jpg" alt="Detalle de un corte, imagen de concepto" loading="lazy"><figcaption>02 — El oficio</figcaption></figure></div></section>
+<section class="section booking" id="reservar"><div><p class="eyebrow">04 / TU PRÓXIMO TURNO</p><h2>Un cambio empieza<br>por <em>sentarte.</em></h2><p>Probá cómo sería elegir tu experiencia.</p><p class="demo">MODO CONCEPTO · NO GENERA UNA RESERVA REAL</p></div><form id="booking-form"><label>Tu nombre<input name="name" required maxlength="80" autocomplete="given-name" placeholder="¿Cómo te llamás?"></label><label>Elegí tu ritual<select name="service" id="service"><option>Corte de autor</option><option>Ritual de barba</option><option>La experiencia completa</option></select></label><div class="form-row"><label>Fecha<input id="date" name="date" type="date" required></label><label>Horario<select name="time"><option>10:00</option><option>12:00</option><option>15:00</option><option>17:00</option><option>19:00</option></select></label></div><button class="button" type="submit">Probar reserva ↗</button><p id="message" role="status" aria-live="polite"></p></form></section>
+<section class="section faq"><p class="eyebrow">ANTES DE VENIR</p><h2>Los detalles, <em>claros.</em></h2><details><summary>¿Cómo funciona la reserva?</summary><p>Por ahora podés probar el formulario. No enviamos datos ni bloqueamos horarios. La conexión con una agenda real será el próximo paso.</p></details><details><summary>¿Puedo elegir mi estilo?</summary><p>El concepto incluye una conversación antes del corte para encontrar una propuesta que acompañe tu pelo, tu rutina y tu estilo.</p></details><details><summary>¿Dónde está el estudio?</summary><p>La dirección, los horarios y los canales de contacto se incorporarán cuando se definan los datos de la barbería.</p></details></section></main>
+<footer><a class="brand" href="#inicio">BARBER<span>STUDIO · CORTE & BARBA</span></a><p>Un clásico. A tu manera.</p><div class="footer-bottom"><span>© <span id="year"></span> Barber Studio · Sitio de concepto</span><a href="#inicio">Volver arriba ↑</a><span>Dirección y contacto por definir</span></div></footer></body></html>
