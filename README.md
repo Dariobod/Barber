@@ -41,13 +41,13 @@ El workflow `.github/workflows/check.yml` verifica y genera el sitio en pushes a
 
 - index.html: contenido y secciones.
 - styles.css: diseño y responsive.
-- script.js: menú y simulación de reserva.
+- script.js: menú y enlaces de selección de servicios en Setmore.
 - assets/: fotografías locales.
 - scripts/: servidor, verificación y build.
 
-Marca provisional, servicios y duraciones ilustrativos. Las fotografías no representan un local real de Barber Studio. El formulario no envía ni guarda datos, no consulta disponibilidad y no crea reservas. Dirección, contacto y tarifas pendientes de definir.
+Marca The Pip's Barber. Servicios y horarios iniciales confirmados; pueden actualizarse. Las fotografías no representan un local real de Barber Studio. Las reservas se completan en Setmore desde la agenda integrada: https://barberpips.setmore.com/. Corte de adultos con Pipa y corte de niños con Hector, 40 minutos cada uno, de lunes a viernes de 10 a 18 (Buenos Aires). Setmore gestiona disponibilidad y confirmación; el sitio no guarda credenciales ni datos de clientes. Correo y teléfono obligatorios, sin cuenta de cliente obligatoria. Para niños se deben usar los datos del adulto responsable. Tarifas pendientes; precios ocultos en Setmore. Dirección pendiente de confirmar.
 
-Próximos pasos: marca y datos reales, fotografías propias, integración de agenda o WhatsApp y publicación definitiva.
+Próximos pasos: marca y datos reales, fotografías propias, prueba completa de reserva/cancelación y notificaciones por correo.
 
 ## Recursos
 
