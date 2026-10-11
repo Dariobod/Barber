@@ -31,11 +31,11 @@ Configuración del proyecto:
 
 La conexión Git de Cloudflare Pages despliega automáticamente los pushes a `main` y puede generar previews de otras ramas y pull requests. Un commit local requiere un push a GitHub para iniciar el despliegue. No hacen falta tokens de Cloudflare en el código ni secretos de despliegue en GitHub Actions.
 
-La conexión de la cuenta y la primera publicación están pendientes de verificar en el panel de Cloudflare. Registrar aquí la URL `*.pages.dev` una vez confirmado el despliegue.
+Proyecto de Cloudflare Pages: `barber-pips`, en la cuenta de la barbería. URL de producción: https://barber-pips.pages.dev/. La integración Git está configurada con `Dariobod/Barber` y producción desde `main`.
 
-### GitHub Pages existente
+### Verificaciones en GitHub
 
-El workflow `.github/workflows/pages.yml` verifica, genera y publica cada push a `main` si GitHub Pages está habilitado con GitHub Actions. La activación del hosting debe verificarse por separado. Este flujo es independiente de Cloudflare Pages.
+El workflow `.github/workflows/check.yml` verifica y genera el sitio en pushes a `main` y pull requests. Cloudflare Pages realiza la publicación mediante su integración Git y también ejecuta los checks antes del build. El antiguo workflow de GitHub Pages se reemplazó por estas verificaciones para centralizar la publicación en Cloudflare.
 
 ## Archivos y alcance
 
