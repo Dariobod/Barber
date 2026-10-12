@@ -85,3 +85,10 @@ videoCards.forEach((card, index) => {
   ['play', 'pause', 'ended', 'error'].forEach(event => video.addEventListener(event, updatePlayback));
   updatePlayback();
 });
+
+videoCards.forEach(card => {
+  const video = card.querySelector('video');
+  const frame = card.querySelector('.video-frame');
+  video.addEventListener('play', () => frame.classList.add('has-started'));
+  video.addEventListener('ended', () => frame.classList.remove('has-started'));
+});
