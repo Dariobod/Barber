@@ -56,3 +56,7 @@ Fotografías de concepto de Unsplash:
 - https://images.unsplash.com/photo-1621605815971-fbc98d665033
 
 DM Sans y Playfair Display mediante Google Fonts, con fuentes del sistema como alternativa sin conexión.
+
+## Videos de Pipa
+
+La sección Puertas adentro contiene cinco videos verticales en un carrusel responsive con controles manuales, teclado y desplazamiento táctil. Se reproducen a demanda y se pausan fuera de vista. Los MP4 H.264/AAC y sus portadas están en assets/pipa-01 a pipa-05; el build los publica junto al sitio en Cloudflare Pages. Las copias MP4 tienen faststart para iniciar la reproducción sin descargar el archivo completo.

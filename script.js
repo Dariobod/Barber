@@ -27,3 +27,43 @@ window.addEventListener('scroll', () => {
   previousScroll = currentScroll;
 }, { passive: true });
 header.addEventListener('focusin', () => header.classList.remove('header-hidden'));
+
+const videoTrack = document.querySelector('.carousel-track');
+const videoCards = [...videoTrack.querySelectorAll('.video-card')];
+const previousVideo = document.querySelector('.carousel-prev');
+const nextVideo = document.querySelector('.carousel-next');
+const videoCounter = document.querySelector('.carousel-count');
+function currentVideo() {
+  return videoCards.reduce((closest, card, index) =>
+    Math.abs(card.offsetLeft - videoCards[0].offsetLeft - videoTrack.scrollLeft) <
+    Math.abs(videoCards[closest].offsetLeft - videoCards[0].offsetLeft - videoTrack.scrollLeft) ? index : closest, 0);
+}
+function updateCarousel() {
+  videoCounter.textContent = String(currentVideo() + 1).padStart(2, '0') + ' / 05';
+  previousVideo.disabled = videoTrack.scrollLeft <= 2;
+  nextVideo.disabled = videoTrack.scrollLeft >= videoTrack.scrollWidth - videoTrack.clientWidth - 2;
+}
+function moveVideo(direction) {
+  const index = Math.max(0, Math.min(videoCards.length - 1, currentVideo() + direction));
+  videoTrack.scrollTo({left: videoCards[index].offsetLeft - videoCards[0].offsetLeft,
+    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+}
+previousVideo.addEventListener('click', () => moveVideo(-1));
+nextVideo.addEventListener('click', () => moveVideo(1));
+videoTrack.addEventListener('keydown', event => {
+  if (event.target !== videoTrack || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+  event.preventDefault(); moveVideo(event.key === 'ArrowRight' ? 1 : -1);
+});
+videoTrack.addEventListener('scroll', updateCarousel, {passive:true});
+new ResizeObserver(updateCarousel).observe(videoTrack);
+const videoVisibility = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (!entry.isIntersecting) entry.target.pause(); });
+}, {threshold:0.25});
+videoCards.forEach(card => {
+  const video = card.querySelector('video');
+  videoVisibility.observe(video);
+  video.addEventListener('play', () => videoCards.forEach(other => {
+    if (other !== card) other.querySelector('video').pause();
+  }));
+});
+updateCarousel();
