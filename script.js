@@ -67,3 +67,21 @@ videoCards.forEach(card => {
   }));
 });
 updateCarousel();
+
+videoCards.forEach((card, index) => {
+  const video = card.querySelector('video');
+  const toggle = card.querySelector('.video-toggle');
+  const icon = toggle.querySelector('.video-toggle-icon');
+  function updatePlayback() {
+    const playing = !video.paused && !video.ended;
+    toggle.setAttribute('aria-pressed', String(playing));
+    toggle.setAttribute('aria-label', (playing ? 'Pausar' : 'Reproducir') + ' video ' + (index + 1));
+    icon.textContent = playing ? 'Ⅱ' : '▶';
+  }
+  toggle.addEventListener('click', async () => {
+    if (!video.paused) { video.pause(); return; }
+    try { await video.play(); } catch { updatePlayback(); }
+  });
+  ['play', 'pause', 'ended', 'error'].forEach(event => video.addEventListener(event, updatePlayback));
+  updatePlayback();
+});
